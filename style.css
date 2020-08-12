@@ -3,10 +3,10 @@
     width: 400px;
     display: flex;
     flex-wrap: wrap;
-    background-color: gray;
+    background-color: grey;
 }
 
-.grid div{
+.grid div {
     height: 40px;
-    width 40px;
+    width: 40px;
 }
