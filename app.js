@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
             square.classList.add(shuffledArray[i])
             grid.appendChild(square)
             squares.push(square)
+
+            square.addEventListener('click', (e) => click(square)) 
         }
 
         for(let i = 0; i < squares.length; i++){
@@ -43,6 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
     createBoard()
+
+    // click on a square
+    const click= (square) => {
+        if (square.classList.contains('bomb')) {
+            alert('Game Over')
+        } else {
+            let total = square.getAttribute('data')
+            if(total != 0 ) {
+                square.classList.add('checked')
+            }
+        }
+    }
 
 
 
